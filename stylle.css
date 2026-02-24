@@ -16,7 +16,6 @@ header{
     gap: 40px;
 }
 
-/* FORM */
 .form-box{
     background: white;
     padding: 20px;
@@ -42,7 +41,6 @@ button{
     border: none;
 }
 
-/* TASK LIST */
 .task-box{
     flex: 1;
     color: white;
@@ -71,4 +69,24 @@ button{
     border: none;
     padding: 5px;
     cursor: pointer;
+}
+/* MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+
+    .main{
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .form-box{
+        width: 100%;
+    }
+
+    .task-header,
+    .task{
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
 }
