@@ -1,92 +1,105 @@
 body{
     margin:0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
-header{
+/* Header */
+h1{
     background: #e5e5e5;
-    padding: 10px;
+    padding: 15px;
+    text-align: center;
+    margin: 0;
+    font-size: 22px;
 }
 
-.main{
-    display: flex;
-    padding: 40px;
-    gap: 40px;
-}
-
-.form-box{
-    background: white;
+/* Main container */
+.container{
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    background: rgba(255,255,255,0.9);
     padding: 20px;
-    width: 300px;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
+/* Inputs */
 input, textarea{
-    width: 95%;
-    padding: 10px;
+    width: 100%;
+    padding: 12px;
     margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #999;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-textarea{
-    height: 150px;
-}
-
+/* Button */
 button{
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: #28a745;
     color: white;
     border: none;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
-.task-box{
-    flex: 1;
-    color: white;
-}
-
-.task-header{
-    display: grid;
-    grid-template-columns: 1fr 2fr 80px;
-    margin-bottom: 10px;
-}
-
+/* Task list */
 .task{
-    background: white;
-    color: black;
+    background: rgba(255,255,255,0.9);
     padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-
-    display: grid;
-    grid-template-columns: 1fr 2fr 80px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
-.delete-btn{
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px;
+.task h3{
+    margin: 0;
+}
+
+.task p{
+    margin: 5px 0;
+}
+
+.delete{
+    color: red;
     cursor: pointer;
+    font-weight: bold;
 }
-/* MOBILE RESPONSIVE FIX */
-@media (max-width: 768px) {
 
-    .main{
-        flex-direction: column;
+/* Mobile fix */
+@media screen and (max-width: 600px){
+
+    h1{
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .container{
+        width: 95%;
         padding: 15px;
-        gap: 20px;
     }
 
-    .form-box{
-        width: 100%;
+    input, textarea{
+        font-size: 14px;
+        padding: 10px;
     }
 
-    .task-header,
+    button{
+        font-size: 15px;
+        padding: 10px;
+    }
+
     .task{
-        grid-template-columns: 1fr;
-        gap: 5px;
+        width: 95%;
+        padding: 12px;
     }
-
 }
